@@ -1,0 +1,108 @@
+.product-gallery {
+	/* background: red; */
+	width: 100%;
+	min-height: 400px;
+	display: flex;
+	justify-content: center;
+	padding: 100px 0px;
+}
+
+.product-gallery__container {
+	/* background: green; */
+	width: 80%;
+}
+
+.product-gallery__navigation__container {
+	/* code */
+}
+
+.product-gallery__product-list {
+	/* background: pink; */
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(auto-fill, auto);
+	gap: 10px 10px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.product-gallery__product-list__item {
+	/* background: yellow; */
+	width: 506px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 0px 0px 10px 0px;
+}
+
+.product-gallery__product-list__item > img {
+	padding: 15px;
+	width: 80%;
+}
+
+.product-gallery__product-list__item > h3 {
+	text-align: center;
+	margin: 10px 0px;
+}
+
+.product-gallery__product-list__item__stock-counter {
+	/* background: red; */
+	display: flex;
+	justify-content: center;
+	padding: 0px 0px;
+}
+
+.product-gallery__product-list__item__stock-counter span {
+	margin: 0px 5px;
+	font-size: 16px;
+}
+
+@media only screen and (max-width: 1280px) {
+	.product-gallery__product-list__item {
+		width: 335px;
+	}
+
+	.product-gallery__product-list {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.product-gallery__product-list__item {
+		width: 405px;
+	}
+
+	.product-gallery__product-list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.product-gallery__product-list__item {
+		width: 302px;
+	}
+}
+
+@media only screen and (max-width: 414px) {
+	.product-gallery__product-list__item {
+		width: 332px;
+	}
+
+	.product-gallery__product-list {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.product-gallery__product-list__item {
+		width: 300px;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.product-gallery__product-list__item {
+		width: 256px;
+	}
+}

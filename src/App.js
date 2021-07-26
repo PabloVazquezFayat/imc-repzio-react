@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar/Navbar";
+import ProductGallery from "./components/ProductGallery/ProductGallery";
+import ProductView from "./components/ProductView/ProductView";
+import Footer from "./components/Footer/Footer";
+
+import { useAPI } from "./API/services";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [res, getData] = useAPI("GET", "../db/product-data.json");
+
+	useEffect(() => {
+		//using setTimeout to demonstrate loading functionality
+		setTimeout(getData, 1000);
+
+		//uncomment getData() to fetch data on component mount
+		//getData();
+	}, []);
+
+	return (
+		<div className="App">
+			{!res.loading ? (
+				<div>
+					<Navbar data={res.data} />
+
+					<Router>
+						<Switch>
+							<Route exact path="/">
+								<ProductGallery data={res.data.items} />
+							</Route>
+
+							<Route exact path="/product-view/:id">
+								<ProductView />
+							</Route>
+						</Switch>
+					</Router>
+
+					<Footer />
+				</div>
+			) : (
+				<div>Loading...</div>
+			)}
+		</div>
+	);
 }
 
 export default App;
