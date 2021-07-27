@@ -1,6 +1,7 @@
 import "./Navbar.css";
 
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar(props) {
 	const {
@@ -9,14 +10,20 @@ export default function Navbar(props) {
 
 	return (
 		<div className="navbar">
-			<div className="navbar__container">
+			<div className="navbar__container layout-container ">
 				<div className="navbar__logo-container">
-					<img
-						src={`http://images.repzio.com/productimages/${ManufacturerID}/logo${ManufacturerID}_lg.jpg?width=75`}
-						alt="Repzio"
-					/>
+					<NavLink to="/">
+						<img
+							src={`http://images.repzio.com/productimages/${ManufacturerID}/logo${ManufacturerID}_lg.jpg?width=85&scale=both`}
+							alt="Repzio"
+						/>
+					</NavLink>
 				</div>
-				<div className="navbar__navigation-container"></div>
+				<div className="navbar__navigation-container">
+					<NavLink to="#">account</NavLink>
+					<NavLink to="#">my cart</NavLink>
+					<NavLink to="#">login</NavLink>
+				</div>
 			</div>
 		</div>
 	);

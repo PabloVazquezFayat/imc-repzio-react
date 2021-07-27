@@ -1,23 +1,29 @@
 .navbar {
-	background: #ffffff;
+	background-color: #ffffff;
 	width: 100%;
-	height: 4.688rem;
+	height: 100px;
 	display: flex;
 	justify-content: center;
 	border-bottom: solid 1px #f1f1f1;
 }
 
 .navbar__container {
-	/* background: red; */
-	width: 80%;
-	height: 4.688rem;
+	height: 100px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
 .navbar__navigation-container {
-	/* background: yellow; */
 	width: 400px;
 	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.navbar__navigation-container * {
+	margin: 10px;
+	font-size: 14px;
+	text-transform: uppercase;
 }

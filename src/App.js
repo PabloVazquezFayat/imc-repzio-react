@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 import ProductGallery from "./components/ProductGallery/ProductGallery";
 import ProductView from "./components/ProductView/ProductView";
 import Footer from "./components/Footer/Footer";
+import NotFound from "./components/NotFound/NotFound";
 
 import { useAPI } from "./API/services";
 
@@ -25,21 +26,23 @@ function App() {
 		<div className="App">
 			{!res.loading ? (
 				<div>
-					<Navbar data={res.data} />
-
 					<Router>
+						<Navbar data={res.data} />
 						<Switch>
 							<Route exact path="/">
-								<ProductGallery data={res.data.items} />
+								<ProductGallery data={res.data} />
 							</Route>
 
-							<Route exact path="/product-view/:id">
-								<ProductView />
+							<Route exact path={`/product-view/:id`}>
+								<ProductView data={res.data} />
+							</Route>
+
+							<Route>
+								<NotFound />
 							</Route>
 						</Switch>
+						<Footer />
 					</Router>
-
-					<Footer />
 				</div>
 			) : (
 				<div>Loading...</div>

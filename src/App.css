@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+	--Heading: "Roboto", sans-serif;
+}
+
 html,
 body {
 	margin: 0px;
@@ -10,13 +17,45 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: var(--Heading);
+	margin: 0px;
+	padding: 0px;
+	color: #000;
+}
+
+div,
+span {
+	font-family: var(--Heading);
+	font-weight: 200;
+	color: #777777;
+}
+
+p {
+	font-family: var(--Heading);
 	font-weight: 400;
+	font-size: 14px;
+	color: #777777;
+	line-height: 22px;
+}
+
+a {
+	font-family: var(--Heading);
+	font-weight: 400;
+	font-size: 14px;
+	text-decoration: none;
+	color: deepskyblue;
+}
+
+ul {
 	margin: 0px;
 	padding: 0px;
 }
 
-span {
-	font-family: sans-serif;
-	color: #777777;
+li {
+	margin: 0px;
+	padding: 0px;
+}
+
+.layout-container {
+	width: 70%;
 }
