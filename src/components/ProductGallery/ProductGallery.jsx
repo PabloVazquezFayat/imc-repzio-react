@@ -7,11 +7,13 @@ import ProductDetailsBanner from "../PageDetailsBanner/PageDetailsBanner";
 import Image from "../Image/Image";
 
 export default function ProductGallery(props) {
-	const { items, SalesRep } = props.data || {};
+	const { items, SalesRep, Message } = props.data || {};
 
 	return (
 		<div className="product-gallery">
-			<ProductDetailsBanner salesRep={SalesRep}>Product Selection</ProductDetailsBanner>
+			<ProductDetailsBanner salesRep={SalesRep} message={Message}>
+				Product Selection
+			</ProductDetailsBanner>
 			<div className="product-gallery__container layout-container">
 				<ul className="product-gallery__product-list">
 					{items && items.length > 0

@@ -3,6 +3,8 @@ import "./Navbar.css";
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+import Logo from "../Logo/Logo";
+
 export default function Navbar(props) {
 	const {
 		data: { ManufacturerID },
@@ -13,7 +15,7 @@ export default function Navbar(props) {
 			<div className="navbar__container layout-container ">
 				<div className="navbar__logo-container">
 					<NavLink to="/">
-						<img
+						<Logo
 							src={`http://images.repzio.com/productimages/${ManufacturerID}/logo${ManufacturerID}_lg.jpg?width=85&scale=both`}
 							alt="Repzio"
 						/>

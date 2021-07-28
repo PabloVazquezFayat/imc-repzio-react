@@ -24,3 +24,8 @@
 	font-size: 14px;
 	font-weight: 400;
 }
+
+.page-details-banner__message > p {
+	margin: 10px 0px;
+	line-height: 15px;
+}

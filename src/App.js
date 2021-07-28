@@ -16,11 +16,13 @@ function App() {
 
 	useEffect(() => {
 		//using setTimeout to demonstrate loading functionality
-		setTimeout(getData, 1000);
+		setTimeout(getData, 3000);
 
 		//uncomment getData() to fetch data on component mount
 		//getData();
 	}, []);
+
+	console.log(res.data);
 
 	return (
 		<div className="App">
@@ -41,7 +43,7 @@ function App() {
 								<NotFound />
 							</Route>
 						</Switch>
-						<Footer />
+						<Footer data={res.data} />
 					</Router>
 				</div>
 			) : (
