@@ -8,6 +8,7 @@ import ProductGallery from "./components/ProductGallery/ProductGallery";
 import ProductView from "./components/ProductView/ProductView";
 import Footer from "./components/Footer/Footer";
 import NotFound from "./components/NotFound/NotFound";
+import Loading from "./components/Loading/Loading";
 
 import { useAPI } from "./API/services";
 
@@ -18,11 +19,10 @@ function App() {
 		//using setTimeout to demonstrate loading functionality
 		setTimeout(getData, 3000);
 
-		//uncomment getData() to fetch data on component mount
+		//uncomment getData() and comment setTimeout()
+		//to fetch data on component mount
 		//getData();
 	}, []);
-
-	console.log(res.data);
 
 	return (
 		<div className="App">
@@ -35,7 +35,7 @@ function App() {
 								<ProductGallery data={res.data} />
 							</Route>
 
-							<Route exact path={`/product-view/:id`}>
+							<Route exact path="/product-view">
 								<ProductView data={res.data} />
 							</Route>
 
@@ -43,11 +43,12 @@ function App() {
 								<NotFound />
 							</Route>
 						</Switch>
+
 						<Footer data={res.data} />
 					</Router>
 				</div>
 			) : (
-				<div>Loading...</div>
+				<Loading />
 			)}
 		</div>
 	);

@@ -13,7 +13,11 @@ export default function Footer(props) {
 			<div className="footer__container layout-container">
 				<div className="footer__container__content">
 					<Logo
-						src={`http://images.repzio.com/productimages/${ManufacturerID}/logo${ManufacturerID}_lg.jpg?width=85&scale=both`}
+						src={
+							ManufacturerID
+								? `http://images.repzio.com/productimages/${ManufacturerID}/logo${ManufacturerID}_lg.jpg?width=85&scale=both`
+								: null
+						}
 						alt="Repzio"
 					/>
 					<p>

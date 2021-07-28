@@ -4,7 +4,7 @@
 	min-height: 400px;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	padding: 0px 0px 100px 0px;
 }
@@ -57,7 +57,7 @@
 	font-size: 14px;
 	font-weight: 400;
 	margin: 0px 0px 5px 0px;
-	color: #fac821;
+	color: var(--RepzioYellow);
 }
 
 .product-gallery__product-list__item__stock-counter {
@@ -73,6 +73,10 @@
 .product-gallery__product-list__item__stock-counter span {
 	margin: 0px 5px;
 	font-size: 16px;
+}
+
+.product-gallery__product-list__nothing-found {
+	font-weight: 400;
 }
 
 @media only screen and (max-width: 768px) {

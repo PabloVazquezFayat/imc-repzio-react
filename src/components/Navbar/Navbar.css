@@ -19,11 +19,19 @@
 	height: 100%;
 	display: flex;
 	justify-content: flex-end;
-	align-items: center;
 }
 
-.navbar__navigation-container * {
-	margin: 10px;
+.navbar__navigation__button {
+	color: #000;
+	height: 20px;
 	font-size: 14px;
 	text-transform: uppercase;
+	text-align: center;
+	margin: 50px 10px 0px 10px;
+	transition: 0.1s;
+}
+
+.navbar__navigation__button:hover {
+	color: var(--RepzioYellow);
+	border-bottom: solid 3px var(--RepzioYellow);
 }

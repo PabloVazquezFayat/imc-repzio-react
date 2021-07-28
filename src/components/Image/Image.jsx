@@ -13,7 +13,7 @@ export default function Image(props) {
 	return (
 		<img
 			srcSet={`${imageSrc.small} 300w, ${imageSrc.medium} 768w, ${imageSrc.large} 1280w, ${imageSrc.xlarge} 1920w`}
-			alt={alt}
+			alt={alt || "Image"}
 		/>
 	);
 }

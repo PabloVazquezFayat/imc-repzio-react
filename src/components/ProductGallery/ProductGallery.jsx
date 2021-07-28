@@ -16,27 +16,31 @@ export default function ProductGallery(props) {
 			</ProductDetailsBanner>
 			<div className="product-gallery__container layout-container">
 				<ul className="product-gallery__product-list">
-					{items && items.length > 0
-						? React.Children.toArray(
-								items.map((item) => {
-									return (
-										<NavLink to={`/product-view/${item.ProductID}`}>
-											<li className="product-gallery__product-list__item">
-												<Image src={item.PhotoName} alt={item.ItemName} />
-												<h3>{item.ItemName}</h3>
-												<div className="product-gallery__product-list__item__base-price">
-													Base Price: {`$${item.BasePrice.toFixed(2)}`}
-												</div>
-												<div className="product-gallery__product-list__item__stock-counter">
-													{item.OnHandQuantity > 0 ? <span>{item.OnHandQuantity}</span> : <span>0</span>}
-													<span>In Stock</span>
-												</div>
-											</li>
-										</NavLink>
-									);
-								})
-						  )
-						: null}
+					{items && items.length > 0 ? (
+						React.Children.toArray(
+							items.map((item) => {
+								return (
+									<NavLink to={`/product-view?productID=${item.ProductID}`}>
+										<li className="product-gallery__product-list__item">
+											<Image src={item.PhotoName} alt={item.ItemName} />
+											<h3>{item.ItemName}</h3>
+											<div className="product-gallery__product-list__item__base-price">
+												Base Price: {`$${item.BasePrice.toFixed(2)}`}
+											</div>
+											<div className="product-gallery__product-list__item__stock-counter">
+												{item.OnHandQuantity > 0 ? <span>{item.OnHandQuantity}</span> : <span>0</span>}
+												<span>In Stock</span>
+											</div>
+										</li>
+									</NavLink>
+								);
+							})
+						)
+					) : (
+						<li className="product-gallery__product-list__item">
+							<div className="product-gallery__product-list__nothing-found">No items found...</div>
+						</li>
+					)}
 				</ul>
 			</div>
 		</div>

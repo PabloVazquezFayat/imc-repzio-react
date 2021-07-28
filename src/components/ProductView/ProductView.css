@@ -40,7 +40,7 @@
 }
 
 .product-view__base-price {
-	color: #fac821;
+	color: var(--RepzioYellow);
 	font-weight: 400;
 	margin: 20px 0px;
 }

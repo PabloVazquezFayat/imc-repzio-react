@@ -3,6 +3,7 @@ import React from "react";
 
 export default function SalesRep(props) {
 	const { data } = props || {};
+	const { FirstName, LastName, EmailAddress, Phone, City, State, PostalCode, CompanyName } = data || {};
 
 	return (
 		<div className="contact-card">
@@ -11,22 +12,22 @@ export default function SalesRep(props) {
 			<div className="contact-card__contact__container">
 				<ul className="contact-card__contact">
 					<li>
-						<p>{`${data.FirstName} ${data.LastName}`}</p>
+						<p>{`${FirstName || ""} ${LastName || ""}`}</p>
 					</li>
 					<li>
-						<p>{`${data.EmailAddress}`}</p>
+						<p>{`${EmailAddress || ""}`}</p>
 					</li>
 					<li>
-						<p>{`${data.Phone}`}</p>
+						<p>{`${Phone || ""}`}</p>
 					</li>
 				</ul>
 
 				<ul className="contact-card__contact">
 					<li>
-						<p>{`${data.City} ${data.State}, ${data.PostalCode}`}</p>
+						<p>{`${City || ""} ${State || ""}, ${PostalCode || ""}`}</p>
 					</li>
 					<li>
-						<p>{`${data.CompanyName}`}</p>
+						<p>{`${CompanyName || ""}`}</p>
 					</li>
 				</ul>
 			</div>

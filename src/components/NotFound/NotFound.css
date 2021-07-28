@@ -31,14 +31,14 @@
 	padding: 15px 35px;
 	margin: 50px 0px 0px;
 	text-align: center;
-	border: solid 2px #fac821;
-	color: #fac821;
+	border: solid 2px var(--RepzioYellow);
+	color: var(--RepzioYellow);
 	font-weight: 400;
 	transition: 0.5s;
 }
 
 .not-found__button:hover {
-	background-color: #fac821;
+	background-color: var(--RepzioYellow);
 	color: #fff;
 }
 

@@ -22,9 +22,13 @@ export default function Navbar(props) {
 					</NavLink>
 				</div>
 				<div className="navbar__navigation-container">
-					<NavLink to="#">account</NavLink>
-					<NavLink to="#">my cart</NavLink>
-					<NavLink to="#">login</NavLink>
+					<NavLink className="navbar__navigation__button" to="#">
+						account
+					</NavLink>
+
+					<NavLink className="navbar__navigation__button" to="#">
+						cart
+					</NavLink>
 				</div>
 			</div>
 		</div>

@@ -4,6 +4,7 @@ import React from "react";
 
 export default function PageDetailsBanner(props) {
 	const { salesRep, message } = props || {};
+	const { FirstName, LastName } = salesRep || {};
 	const text = props.children || "Product Selection";
 
 	return (
@@ -14,7 +15,7 @@ export default function PageDetailsBanner(props) {
 					{message ? (
 						<div className="page-details-banner__message" dangerouslySetInnerHTML={{ __html: message }} />
 					) : null}
-					<span>selected by : {`${salesRep.FirstName} ${salesRep.LastName}`}</span>
+					<span>selected by : {`${FirstName || ""} ${LastName || ""}`}</span>
 				</div>
 			</div>
 		</div>
