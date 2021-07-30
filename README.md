@@ -1,15 +1,29 @@
-### `Available Scripts`
+# imc-repzio-react
 
-In the project directory, you can run:
+## Project setup
 
-### `npm run start`
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+
+```
+npm run start
 
 Or
 
-### `yarn start`
+yarn start
+```
 
-Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Feature Wishlist
+
+Use Redux for global state management
+Add Cart page/view
+Add Product Quantity selector
+Make Accessibility friendly
+Add filtering, sorting and pagination features
+Display "similar" or "alike" items in product view page
+Add to wishlist or "like" feature
