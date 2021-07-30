@@ -7,7 +7,6 @@ import queryString from "query-string";
 
 import ProductDetailsBanner from "../PageDetailsBanner/PageDetailsBanner";
 import Image from "../Image/Image";
-import ContactCard from "../ContactCard/ContactCard";
 
 export default function ProductView(props) {
 	const { items, SalesRep } = props.data || {};
@@ -42,7 +41,6 @@ export default function ProductView(props) {
 							<p>{productData.Description || "No description found for this item..."}</p>
 							<div className="product-view__item-info">Dimensions: {productData.Dimensions}</div>
 							<div className="product-view__item-info item-id">Item ID: {productData.ItemID}</div>
-							<ContactCard data={SalesRep} />
 						</div>
 					</div>
 				</div>
